@@ -47,7 +47,7 @@ app.get('/testing',(req,res)=>{
 app.get('/baseranker',(req,res)=>res.end('Check'));
 
 app.post('/tester', function(req,res){
-  const pythonPro = spawn('python',[path.join(__dirname,"/python-scripts/printout.py"),"system library works normally"]);
+  const pythonPro = spawn('python',[path.join(__dirname,"/python-scripts/printout.py"),JSON.stringify(req.body.base)]);
   pythonPro.stdout.on('data',(data)=>{
     res.end(data)});
 });
