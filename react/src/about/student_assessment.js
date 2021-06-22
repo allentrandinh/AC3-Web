@@ -1,0 +1,6 @@
+export const data = {
+    goal:'What are the best locations for supplies in the South China Sea, based on political relationships, geography, climate, etc. How can we sustain small and mobile marine units using these supplies or how can they sustain themselves (energy production, food and water, etc).',
+    for:'Black and Rossi',
+    reason:'The USA needs to be ready for any conflict with its most powerful peer competitors in the world, in this case China. China is the closest economy in scale and reach to the US by far. Tensions are highest in the South China Sea, the most likely place for conflict to arise. We need to have ideas ready for a response in the case that something does happen.',
+    solution:'Small mobile units with self sustaining energy/fuel sources are a tempting solution. Providing marines with the means to sustain themselves in regards to food and water could be extremely useful. These abilities would greatly reduce the amount of resources each marine would need to carry, while also reducing the need for large, stationary supply caches across the South China Sea.'
+}
