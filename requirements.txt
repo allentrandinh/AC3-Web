@@ -1,1 +1,2 @@
 haversine==2.3.1
+Haversine==2.3.1
