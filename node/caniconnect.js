@@ -8,6 +8,7 @@ const path = require('path');
 const port = process.env.PORT|| 5000;
 
 const app = express();
+app.use(cors());
 // app.use(
 //   cors({
 //     origin: 'http://localhost:3000',
@@ -28,14 +29,11 @@ app.get('/',(req,res)=>res.end('Check'))
 //  });
 
 app.post('/baseranker', function(req,res){
-  console.log('baseranker reached');
-  console.log(JSON.stringify(req.body.base),JSON.stringify(req.body.area));
   const pythonProcess = spawn('python',[path.join(__dirname,"/python-scripts/baseranker.py"),JSON.stringify(req.body.base),JSON.stringify(req.body.area)]);
   pythonProcess.stdout.on('data',(data)=>{
     console.log(data.toString());
     res.end(data);
     });
-  console.log("Done running?");
 });
 
 app.get('/testing',(req,res)=>{
