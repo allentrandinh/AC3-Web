@@ -46,6 +46,10 @@ app.get('/testing',(req,res)=>{
 
 app.get('/baseranker',(req,res)=>res.end('Check'));
 
+app.post('/tester', function(req,res){
+  res.end("tester post method works")
+});
+
 app.listen(port, () => {
   console.log('Server Listening');
 });

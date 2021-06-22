@@ -42,6 +42,9 @@ const FullInput = () => {
         console.log(bases);
         console.log(areas);
         axios
+            .post('/tester',"random command")
+            .then((response)=>console.log(response));
+        axios
             .post('/baseranker',{base:bases,area:areas})
             .then((respond) => {
                 console.log(respond);
