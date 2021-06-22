@@ -47,7 +47,9 @@ app.get('/testing',(req,res)=>{
 app.get('/baseranker',(req,res)=>res.end('Check'));
 
 app.post('/tester', function(req,res){
-  res.end("tester post method works")
+  const pythonPro = spawn('python',[path.join(__dirname,"/python-scripts/printout.py")]);
+  pythonPro.stdout.on('data',(data)=>{
+    res.end(data)});
 });
 
 app.listen(port, () => {
