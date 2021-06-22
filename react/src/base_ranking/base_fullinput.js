@@ -46,6 +46,7 @@ const FullInput = () => {
                 setReply({intro:respond.data.intro,base:respond.data.base})
              })
             .catch(err => {console.log(err)});
+        console.log("Done running?");
     };
 
 

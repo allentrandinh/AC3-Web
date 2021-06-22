@@ -8,12 +8,12 @@ const path = require('path');
 const port = process.env.PORT|| 5000;
 
 const app = express();
-app.use(
-  cors({
-    origin: 'http://localhost:3000',
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: 'http://localhost:3000',
+//     credentials: true,
+//   })
+// );
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -37,13 +37,13 @@ app.post('/baseranker', function(req,res){
   console.log("Done running?");
 });
 
-// app.get('/testing',(req,res)=>{
-//   console.log("Inside testing function");
-//   const pythonPro = spawn('python',[path.join(__dirname,"/python-scripts/printout.py")]);
-//   console.log("After spawning");
-//   pythonPro.stdout.on('data',(data)=>{
-//     res.end(data)});
-// });
+app.get('/testing',(req,res)=>{
+  console.log("Inside testing function");
+  const pythonPro = spawn('python',[path.join(__dirname,"/python-scripts/printout.py")]);
+  console.log("After spawning");
+  pythonPro.stdout.on('data',(data)=>{
+    res.end(data)});
+});
 
 app.get('/baseranker',(req,res)=>res.end('Check'));
 
