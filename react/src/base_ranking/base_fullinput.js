@@ -39,6 +39,8 @@ const FullInput = () => {
     const submitData = (e) => {
         e.preventDefault();
         console.log("submit button clicked");
+        console.log(bases);
+        console.log(areas);
         axios
             .post('/baseranker',{base:bases,area:areas})
             .then((respond) => {
@@ -46,7 +48,6 @@ const FullInput = () => {
                 setReply({intro:respond.data.intro,base:respond.data.base})
              })
             .catch(err => {console.log(err)});
-        console.log("Done running?");
     };
 
 

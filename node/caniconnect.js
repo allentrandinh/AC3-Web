@@ -29,6 +29,7 @@ app.get('/',(req,res)=>res.end('Check'))
 
 app.post('/baseranker', function(req,res){
   console.log('baseranker reached');
+  console.log(JSON.stringify(req.body.base),JSON.stringify(req.body.area));
   const pythonProcess = spawn('python',[path.join(__dirname,"/python-scripts/baseranker.py"),JSON.stringify(req.body.base),JSON.stringify(req.body.area)]);
   pythonProcess.stdout.on('data',(data)=>{
     console.log(data.toString());
