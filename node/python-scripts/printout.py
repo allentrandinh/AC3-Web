@@ -1,5 +1,6 @@
 import sys
 import json
+import haversine as hs
 
 # input = sys.argv[1]
 base_info = json.loads(sys.argv[1])
