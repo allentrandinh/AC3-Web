@@ -36,21 +36,21 @@ app.post('/baseranker', function(req,res){
     });
 });
 
-app.get('/testing',(req,res)=>{
-  console.log("Inside testing function");
-  const pythonPro = spawn('python',[path.join(__dirname,"/python-scripts/printout.py")]);
-  console.log("After spawning");
-  pythonPro.stdout.on('data',(data)=>{
-    res.end(data)});
-});
+// app.get('/testing',(req,res)=>{
+//   console.log("Inside testing function");
+//   const pythonPro = spawn('python',[path.join(__dirname,"/python-scripts/printout.py")]);
+//   console.log("After spawning");
+//   pythonPro.stdout.on('data',(data)=>{
+//     res.end(data)});
+// });
 
-app.get('/baseranker',(req,res)=>res.end('Check'));
+// app.get('/baseranker',(req,res)=>res.end('Check'));
 
-app.post('/tester', function(req,res){
-  const pythonPro = spawn('python',[path.join(__dirname,"/python-scripts/printout.py"),JSON.stringify(req.body.base)]);
-  pythonPro.stdout.on('data',(data)=>{
-    res.end(data)});
-});
+// app.post('/tester', function(req,res){
+//   const pythonPro = spawn('python',[path.join(__dirname,"/python-scripts/printout.py"),JSON.stringify(req.body.base)]);
+//   pythonPro.stdout.on('data',(data)=>{
+//     res.end(data)});
+// });
 
 app.listen(port, () => {
   console.log('Server Listening');

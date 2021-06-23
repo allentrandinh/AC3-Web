@@ -482,10 +482,10 @@ h5 {
   padding-top: 1rem;
   padding-left: 5%;
   color: black;
+  text-align: left;
 }
 
 .rankerresult ul {
-  padding-left: 7%;
   list-style-type: circle;
 }
 
