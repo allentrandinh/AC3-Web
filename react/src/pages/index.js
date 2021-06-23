@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import IntlRela from './intlrela';
 import About from './about';
 import BaseRanking from './baseranking';
 import DynamicData from '../international_relation/Dynamic_data';
