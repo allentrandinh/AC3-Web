@@ -18,10 +18,10 @@ const ReactRouterSetup = () => {
         <Route exact path='/data'>
           <DynamicData/>
         </Route>
-        <Route path='/:id' children={<Country />}></Route>
         <Route path='/baseranking'>
           <BaseRanking />
         </Route>
+        <Route path='/:id' children={<Country />}></Route>
       </Switch>
     </Router>
   );
