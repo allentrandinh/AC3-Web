@@ -1,0 +1,12 @@
+Purpose: Codes written for AC3 - a consulting project between Albion College and Black and Rossi
+
+Description:
+- Procfile,package.json,requirements.txt contains information needed for deployment to Heroku
+- full-stack contains NodeJS and ReactJS code  for the website
+    + Within the node folder: caniconnect.js is the server code, python-scripts contains all the python code running in background
+    + Within the react/src folder:
+        > pages contains the routing (index.js), navigation bar (nav-bar.js), and series of pages appearing on the website
+        > each page has its own folder inside src where its children components are written.
+    + the server currently using the build made by the react folder to display information -> 2 ways of running locally:
+        > run the server (nodemon caniconnect.js at node, comment out static code) and react (npm start at react folder) separately -> see changes in react as it is changed
+        > rebuild and rerun the whole app (npm run build and npm start at root folder)
