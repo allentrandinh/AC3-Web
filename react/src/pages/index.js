@@ -9,7 +9,7 @@ import Navbar from './nav-bar';
 
 const ReactRouterSetup = () => {
   return (
-    <Router>
+    <Router basename='/'>
       <Navbar />
       <Switch>
         <Route path='/about'>
@@ -18,7 +18,7 @@ const ReactRouterSetup = () => {
         <Route exact path='/data'>
           <DynamicData/>
         </Route>
-        <Route path='/data/:id' children={<Country />}></Route>
+        <Route path='/:id' children={<Country />}></Route>
         <Route path='/baseranking'>
           <BaseRanking />
         </Route>

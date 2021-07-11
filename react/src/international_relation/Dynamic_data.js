@@ -10,7 +10,7 @@ const Countries = () => {
                 return(
                     <div key={country.id} className='item'>
                         <h4>{country.id}</h4>
-                        <Link to={`/data/${country.id}`}>Learn More</Link>
+                        <Link to={`/${country.id}`}>Learn More</Link>
                     </div>
                 )
             })}

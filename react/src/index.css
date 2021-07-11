@@ -486,6 +486,7 @@ h5 {
 }
 
 .rankerresult ul {
+  padding-left: 7%;
   list-style-type: circle;
 }
 
